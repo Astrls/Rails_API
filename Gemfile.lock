@@ -91,6 +91,7 @@ GEM
     irb (1.8.1)
       rdoc
       reline (>= 0.3.8)
+    jwt (2.7.1)
     loofah (2.21.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -163,6 +164,10 @@ GEM
     responders (3.1.0)
       actionpack (>= 5.2)
       railties (>= 5.2)
+    simple_token_authentication (1.18.1)
+      actionmailer (>= 3.2.6, < 8)
+      actionpack (>= 3.2.6, < 8)
+      devise (>= 3.2, < 6)
     sqlite3 (1.6.6-arm64-darwin)
     stringio (3.0.8)
     thor (1.2.2)
@@ -180,12 +185,15 @@ PLATFORMS
   arm64-darwin-22
 
 DEPENDENCIES
+  bcrypt (~> 3.1.7)
   bootsnap
   debug
   devise
+  jwt
   puma (~> 5.0)
   rack-cors
   rails (~> 7.0.8)
+  simple_token_authentication (~> 1.0)
   sqlite3 (~> 1.4)
   tzinfo-data
 
